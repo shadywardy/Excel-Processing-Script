@@ -52,7 +52,7 @@ For each unique value in the chosen column, the script generates an Excel file n
 
 If you prefer not to run the script from the command line, an executable version is also available for download. Simply click the link below to download the `.exe` file:
 
-[Download Excel Processor Executable](link-to-your-executable-file)
+[Download Excel Processor Executable](https://www.mediafire.com/file/adbi587f55gtrdy/excel_processor_exe_file.7z/file)
 
 ## Contribution
 
