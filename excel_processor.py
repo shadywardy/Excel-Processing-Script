@@ -3,9 +3,9 @@ import os
 
 def process_excel_file():
     # Load the Excel file
-    input_file = input("Please input the Excel file path (or type 'exit' to quit): ").strip('"')  # Remove surrounding quotes
+    input_file = input("Please input the Excel file path (or type 'c' to quit): ").strip('"')  # Remove surrounding quotes
     
-    if input_file.lower() == 'exit':
+    if input_file.lower() == 'c':
         return False  # Exit the function to stop the script
 
     print(f"Inputing file , Please Wait: {input_file}")
@@ -58,3 +58,7 @@ while True:
         break  # Exit the loop and end the script
 
 print("Thank you for using the Excel processing script. Goodbye! /n this script build by shady wardy , Email:shadywardy@gmail.com ")
+
+# Add this line at the end to keep the window open
+input("Press Enter to exit...")
+
