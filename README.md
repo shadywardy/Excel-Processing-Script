@@ -1,67 +1,71 @@
-# Excel Processing Script
+# Excel Processor
 
-Welcome to the Excel Processing Script! This handy tool is designed to streamline your data management tasks by allowing you to filter Excel files and create separate files based on unique values in specified columns.
+This Python-based tool allows you to filter and save data from Excel files (`.xls` and `.xlsx` formats) by specifying a column to filter. It reads an input Excel file, filters data based on a specific column, and generates separate Excel files for each unique value in that column.
 
 ## Features
+- **Load Excel Files**: Load Excel files and process them in the specified format (`.xls` or `.xlsx`).
+- **Filter by Column**: Filter the data based on unique values from a column of your choice.
+- **Save Filtered Files**: Save the filtered data to new Excel files, named based on the filter column values.
+- **Supports `.xls` and `.xlsx` Formats**: Choose between `.xls` or `.xlsx` output files.
 
-- **Easy Input**: Load your Excel file with a simple input prompt.
-- **Dynamic Filtering**: Choose any column to filter the data dynamically.
-- **Unique Value Extraction**: Automatically generates new Excel files for each unique value in the specified column.
-- **User-Friendly**: Prompts you at each step, ensuring a smooth user experience.
-- **Exit Options**: Easily exit the program at any time by typing 'exit' or 'c'.
+## Requirements
+To use the `Excel Processor` script, you'll need the following Python packages:
 
-## Installation
+- `pandas`
+- `pyexcel`
+- `pyexcel-xls`
 
-To get started, you’ll need Python and the `pandas` library. If you don’t have them installed, you can set them up using the following commands:
+### Installation
+
+To install the required dependencies, you can use `pip`:
 
 ```bash
-pip install pandas
+pip install pandas pyexcel pyexcel-xls
 ```
 
 ## Usage
 
-1. **Run the Script**: Launch the script using Python.
-2. **Input the Excel File Path**: When prompted, enter the full path to your Excel file. You can also type `'exit'` to quit the program.
-3. **Choose a Filter Column**: Enter the name of the column you wish to filter by. If you want to quit, simply type `'c'`.
-4. **Check for Valid Column**: If the column does not exist, you’ll be prompted to enter a valid column name.
-5. **Receive Output**: The script will generate separate Excel files for each unique value in the specified column, saving them in the current directory.
-6. **Exit**: Type `'exit'` or `'c'` to stop the script at any time.
+1. **Run the Executable**:
+   - Simply execute the `excel_processor.exe` on your system. If you're using the Python script, you can run it directly with Python.
 
-### Example
+2. **Input Excel File**:
+   - The script will prompt you to input the path to the Excel file you wish to process.
+   
+3. **Specify Filter Column**:
+   - Enter the column you want to filter by (e.g., `Region`, `Salesperson`, etc.). The script will generate separate files for each unique value in that column.
 
-Here’s an example of how to use the script:
+4. **Choose Output Format**:
+   - You will be prompted to choose the file format for the output. You can choose between `.xls` and `.xlsx` formats.
+
+5. **Generate Files**:
+   - The script will create separate Excel files for each unique value in the filter column. The new files will be named according to the format `file_name_value.extension`.
+
+6. **Exit**:
+   - You can type 'c' to exit the script at any time.
+
+## Example
+
+Here’s an example of how the process works:
+
+1. Input the Excel file: `data.xlsx`.
+2. Choose the column to filter by: `Department`.
+3. Choose the file format: `.xlsx`.
+4. The script generates files like:
+   - `filtered_data_Sales.xlsx`
+   - `filtered_data_Marketing.xlsx`
+   - `filtered_data_Engineering.xlsx`
+
+## How to Build the Executable
+
+If you'd like to build the executable yourself, use PyInstaller with the following command:
 
 ```bash
-python excel_processor.py
+pyinstaller --onefile --icon="your_icon.ico" excel_processor.py
 ```
 
-When prompted:
-```
-Please input the Excel file path (or type 'exit' to quit): "D:\YourPath\YourExcelFile.xlsx"
-Inputting file, Please Wait: D:\YourPath\YourExcelFile.xlsx
-Please enter the filter column (or type 'c' to quit): "Company"
-```
+This will generate a standalone `.exe` file that you can run on any Windows machine.
 
-The script will create separate Excel files for each unique company listed in the "Company" column.
+## License
 
-## Output
-
-For each unique value in the chosen column, the script generates an Excel file named after that value, ensuring any invalid characters in the filename are replaced. For example, if the unique value is "ABC Corp", it will create a file named `ABC_Corp.xlsx`.
-
-## Executable Version
-
-If you prefer not to run the script from the command line, an executable version is also available for download. Simply click the link below to download the `.exe` file:
-
-[Download Excel Processor Executable](https://www.mediafire.com/file/pjgr35tihrvgl9h/excel_processor.exe/file)
-
-## Contribution
-
-This script is built by **Shady Wardy**. If you have suggestions or improvements, feel free to fork the repository and submit a pull request!
-
-## Contact
-
-For any inquiries, you can reach me at:  
-**Email**: [shadywardy@gmail.com](mailto:shadywardy@gmail.com)
-
-Thank you for using the Excel Processing Script. Enjoy organizing your data!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
